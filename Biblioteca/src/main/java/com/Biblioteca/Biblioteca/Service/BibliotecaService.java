@@ -3,10 +3,12 @@ package com.Biblioteca.Biblioteca.Service;
 import com.Biblioteca.Biblioteca.Model.Biblioteca;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BibliotecaService {
- public Biblioteca biblioteca(Biblioteca biblioteca) {
+    public List<Biblioteca> lista() {
 
-     return null;
- }
+ return lista;
+    }
 }
