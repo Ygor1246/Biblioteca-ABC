@@ -1,7 +1,19 @@
 package com.Biblioteca.Biblioteca.Model;
 
+import lombok.Data;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
+
+@Repository
+@Data
+@Entity
+
+
 public class Biblioteca {
+
+@Id
+@GeneratedValeu()
    private List<Biblioteca> biblioteca;
 
 
@@ -9,27 +21,6 @@ public class Biblioteca {
     private String nome;
     private String telefone;
 
-    public Integer getId() {
 
-        return id;
-    }
-    public void setId(Integer id)
-    {
-        this.id = id;
-    }
-
-    public String getNome()
-    {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-  public String getTelefone() {
-        return telefone;
-  }
-  public void setTelefone(String telefone) {
-        this.telefone = telefone;
-  }
 
 }

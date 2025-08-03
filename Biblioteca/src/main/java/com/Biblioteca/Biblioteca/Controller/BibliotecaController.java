@@ -19,21 +19,19 @@ public class BibliotecaController {
 
 
     @Autowired
-    private BibliotecaService bibliotecaService;
+    private final BibliotecaService bibliotecaService;
 
-
-@GetMapping("/findAll")
-    public ResponseEntity<List<Biblioteca>> lista() {
-        try {
-
-
-            List<Biblioteca> lista= this.bibliotecaService.lista();
-
-            return new ResponseEntity<>(lista, HttpStatus.OK);
-        } catch (Exception e) {
-  return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        }
+    public BibliotecaController(BibliotecaService bibliotecaService) {
+        this.bibliotecaService = bibliotecaService;
     }
 
+@GetMapping("/findAll")
+    public ResponseEntity<List<Biblioteca>> findAll() {
+        try {
+            var  result = bibliotecaService.findAll();
+        }catch (Exception e) {
+
+        }
+        }
 
 }
